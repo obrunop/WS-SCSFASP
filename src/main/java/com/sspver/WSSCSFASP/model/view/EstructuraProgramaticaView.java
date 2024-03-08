@@ -1,4 +1,4 @@
-package com.sspver.WSSCSFASP.model;
+package com.sspver.WSSCSFASP.model.view;
 
 import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
