@@ -21,7 +21,7 @@ import java.io.Serializable;
     @NamedQuery(name = "OficinasView.findByNombreOficina", query = "SELECT o FROM OficinasView o WHERE o.nombreOficina = :nombreOficina"),
     @NamedQuery(name = "OficinasView.findByNumeroTelefono", query = "SELECT o FROM OficinasView o WHERE o.numeroTelefono = :numeroTelefono"),
     @NamedQuery(name = "OficinasView.findByExtensionTelefono", query = "SELECT o FROM OficinasView o WHERE o.extensionTelefono = :extensionTelefono")})
-public class OficinView implements Serializable {
+public class OficinaView implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -38,7 +38,7 @@ public class OficinView implements Serializable {
     @Column(name = "extension_telefono")
     private String extensionTelefono;
 
-    public OficinView() {
+    public OficinaView() {
     }
 
     public int getOficinaId() {
