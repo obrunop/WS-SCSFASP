@@ -34,7 +34,7 @@ public class Honorario implements Serializable {
     @Column(name = "concepto")
     private String concepto;
     @OneToMany(mappedBy = "fkHonorario")
-    private Collection<SolicitudHonorariO> solicitudesHonorariosCollection;
+    private Collection<SolicitudHonorario> solicitudesHonorariosCollection;
 
     public Honorario() {
     }
@@ -59,11 +59,11 @@ public class Honorario implements Serializable {
         this.concepto = concepto;
     }
 
-    public Collection<SolicitudHonorariO> getSolicitudesHonorariosCollection() {
+    public Collection<SolicitudHonorario> getSolicitudesHonorariosCollection() {
         return solicitudesHonorariosCollection;
     }
 
-    public void setSolicitudesHonorariosCollection(Collection<SolicitudHonorariO> solicitudesHonorariosCollection) {
+    public void setSolicitudesHonorariosCollection(Collection<SolicitudHonorario> solicitudesHonorariosCollection) {
         this.solicitudesHonorariosCollection = solicitudesHonorariosCollection;
     }
 

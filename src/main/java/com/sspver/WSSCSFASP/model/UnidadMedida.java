@@ -34,7 +34,7 @@ public class UnidadMedida implements Serializable {
     @Column(name = "nombre_UM")
     private String nombreUM;
     @OneToMany(mappedBy = "fkUM")
-    private Collection<Bienes> bienesCollection;
+    private Collection<Bien> bienesCollection;
 
     public UnidadMedida() {
     }
@@ -59,11 +59,11 @@ public class UnidadMedida implements Serializable {
         this.nombreUM = nombreUM;
     }
 
-    public Collection<Bienes> getBienesCollection() {
+    public Collection<Bien> getBienesCollection() {
         return bienesCollection;
     }
 
-    public void setBienesCollection(Collection<Bienes> bienesCollection) {
+    public void setBienesCollection(Collection<Bien> bienesCollection) {
         this.bienesCollection = bienesCollection;
     }
 

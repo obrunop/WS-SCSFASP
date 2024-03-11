@@ -140,7 +140,7 @@ public class SolicitudRecurso implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "solicitudesRecursos")
     private Collection<PedidoSolicitud> pedidosSolicitudesCollection;
     @OneToMany(mappedBy = "fkSolicitud")
-    private Collection<SolicitudHonorariO> solicitudesHonorariosCollection;
+    private Collection<SolicitudHonorario> solicitudesHonorariosCollection;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "fkSolicitud")
     private Collection<FacturaSolicitud> facturasSolicitudesCollection;
     @OneToMany(mappedBy = "fkSolicitud")
@@ -428,11 +428,11 @@ public class SolicitudRecurso implements Serializable {
         this.pedidosSolicitudesCollection = pedidosSolicitudesCollection;
     }
 
-    public Collection<SolicitudHonorariO> getSolicitudesHonorariosCollection() {
+    public Collection<SolicitudHonorario> getSolicitudesHonorariosCollection() {
         return solicitudesHonorariosCollection;
     }
 
-    public void setSolicitudesHonorariosCollection(Collection<SolicitudHonorariO> solicitudesHonorariosCollection) {
+    public void setSolicitudesHonorariosCollection(Collection<SolicitudHonorario> solicitudesHonorariosCollection) {
         this.solicitudesHonorariosCollection = solicitudesHonorariosCollection;
     }
 

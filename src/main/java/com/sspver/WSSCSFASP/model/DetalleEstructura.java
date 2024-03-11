@@ -49,10 +49,10 @@ public class DetalleEstructura implements Serializable {
     private Collection<Nota> notasCollection;
     @JoinColumn(name = "fk_bien", referencedColumnName = "bien_id")
     @ManyToOne(optional = false)
-    private Bienes fkBien;
+    private Bien fkBien;
     @JoinColumn(name = "fk_capitulo", referencedColumnName = "capitulo_id")
     @ManyToOne(optional = false)
-    private Capitulos fkCapitulo;
+    private Capitulo fkCapitulo;
     @JoinColumn(name = "fk_concepto", referencedColumnName = "concepto_id")
     @ManyToOne(optional = false)
     private Concepto fkConcepto;
@@ -129,19 +129,19 @@ public class DetalleEstructura implements Serializable {
         this.notasCollection = notasCollection;
     }
 
-    public Bienes getFkBien() {
+    public Bien getFkBien() {
         return fkBien;
     }
 
-    public void setFkBien(Bienes fkBien) {
+    public void setFkBien(Bien fkBien) {
         this.fkBien = fkBien;
     }
 
-    public Capitulos getFkCapitulo() {
+    public Capitulo getFkCapitulo() {
         return fkCapitulo;
     }
 
-    public void setFkCapitulo(Capitulos fkCapitulo) {
+    public void setFkCapitulo(Capitulo fkCapitulo) {
         this.fkCapitulo = fkCapitulo;
     }
 

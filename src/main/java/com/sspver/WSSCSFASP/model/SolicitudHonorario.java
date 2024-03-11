@@ -24,7 +24,7 @@ import java.math.BigDecimal;
     @NamedQuery(name = "SolicitudesHonorarios.findAll", query = "SELECT s FROM SolicitudesHonorarios s"),
     @NamedQuery(name = "SolicitudesHonorarios.findBySolicitudHonorarioId", query = "SELECT s FROM SolicitudesHonorarios s WHERE s.solicitudHonorarioId = :solicitudHonorarioId"),
     @NamedQuery(name = "SolicitudesHonorarios.findByMontoParcial", query = "SELECT s FROM SolicitudesHonorarios s WHERE s.montoParcial = :montoParcial")})
-public class SolicitudHonorariO implements Serializable {
+public class SolicitudHonorario implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -42,10 +42,10 @@ public class SolicitudHonorariO implements Serializable {
     @ManyToOne
     private SolicitudRecurso fkSolicitud;
 
-    public SolicitudHonorariO() {
+    public SolicitudHonorario() {
     }
 
-    public SolicitudHonorariO(Integer solicitudHonorarioId) {
+    public SolicitudHonorario(Integer solicitudHonorarioId) {
         this.solicitudHonorarioId = solicitudHonorarioId;
     }
 
@@ -91,10 +91,10 @@ public class SolicitudHonorariO implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof SolicitudHonorariO)) {
+        if (!(object instanceof SolicitudHonorario)) {
             return false;
         }
-        SolicitudHonorariO other = (SolicitudHonorariO) object;
+        SolicitudHonorario other = (SolicitudHonorario) object;
         if ((this.solicitudHonorarioId == null && other.solicitudHonorarioId != null) || (this.solicitudHonorarioId != null && !this.solicitudHonorarioId.equals(other.solicitudHonorarioId))) {
             return false;
         }

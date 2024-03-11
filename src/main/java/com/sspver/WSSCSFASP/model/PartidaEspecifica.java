@@ -48,7 +48,7 @@ public class PartidaEspecifica implements Serializable {
     @OneToMany(mappedBy = "fkPespecifica")
     private Collection<DetalleEstructura> detallesEstructurasCollection;
     @OneToMany(mappedBy = "fkPespecifica")
-    private Collection<Bienes> bienesCollection;
+    private Collection<Bien> bienesCollection;
 
     public PartidaEspecifica() {
     }
@@ -110,11 +110,11 @@ public class PartidaEspecifica implements Serializable {
         this.detallesEstructurasCollection = detallesEstructurasCollection;
     }
 
-    public Collection<Bienes> getBienesCollection() {
+    public Collection<Bien> getBienesCollection() {
         return bienesCollection;
     }
 
-    public void setBienesCollection(Collection<Bienes> bienesCollection) {
+    public void setBienesCollection(Collection<Bien> bienesCollection) {
         this.bienesCollection = bienesCollection;
     }
 

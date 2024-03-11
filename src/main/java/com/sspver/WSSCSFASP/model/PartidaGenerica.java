@@ -50,7 +50,7 @@ public class PartidaGenerica implements Serializable {
     @ManyToOne
     private Concepto fkConcepto;
     @OneToMany(mappedBy = "fkPgenerica")
-    private Collection<Bienes> bienesCollection;
+    private Collection<Bien> bienesCollection;
 
     public PartidaGenerica() {
     }
@@ -120,11 +120,11 @@ public class PartidaGenerica implements Serializable {
         this.fkConcepto = fkConcepto;
     }
 
-    public Collection<Bienes> getBienesCollection() {
+    public Collection<Bien> getBienesCollection() {
         return bienesCollection;
     }
 
-    public void setBienesCollection(Collection<Bienes> bienesCollection) {
+    public void setBienesCollection(Collection<Bien> bienesCollection) {
         this.bienesCollection = bienesCollection;
     }
 
