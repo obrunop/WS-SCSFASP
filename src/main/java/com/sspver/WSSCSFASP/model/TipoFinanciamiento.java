@@ -35,7 +35,7 @@ public class TipoFinanciamiento implements Serializable {
     @Column(name = "nombre_rlcf")
     private String nombreRlcf;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "fkRLCF")
-    private Collection<DetallesEstructuras> detallesEstructurasCollection;
+    private Collection<DetalleEstructura> detallesEstructurasCollection;
 
     public TipoFinanciamiento() {
     }
@@ -60,11 +60,11 @@ public class TipoFinanciamiento implements Serializable {
         this.nombreRlcf = nombreRlcf;
     }
 
-    public Collection<DetallesEstructuras> getDetallesEstructurasCollection() {
+    public Collection<DetalleEstructura> getDetallesEstructurasCollection() {
         return detallesEstructurasCollection;
     }
 
-    public void setDetallesEstructurasCollection(Collection<DetallesEstructuras> detallesEstructurasCollection) {
+    public void setDetallesEstructurasCollection(Collection<DetalleEstructura> detallesEstructurasCollection) {
         this.detallesEstructurasCollection = detallesEstructurasCollection;
     }
 

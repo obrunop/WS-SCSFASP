@@ -48,7 +48,7 @@ public class DetalleEstructuraSolicitud implements Serializable {
     private String descripcion;
     @JoinColumn(name = "fk_solicitud", referencedColumnName = "solicitud_id")
     @ManyToOne
-    private SolicitudesRecursos fkSolicitud;
+    private SolicitudRecurso fkSolicitud;
 
     public DetalleEstructuraSolicitud() {
     }
@@ -103,11 +103,11 @@ public class DetalleEstructuraSolicitud implements Serializable {
         this.descripcion = descripcion;
     }
 
-    public SolicitudesRecursos getFkSolicitud() {
+    public SolicitudRecurso getFkSolicitud() {
         return fkSolicitud;
     }
 
-    public void setFkSolicitud(SolicitudesRecursos fkSolicitud) {
+    public void setFkSolicitud(SolicitudRecurso fkSolicitud) {
         this.fkSolicitud = fkSolicitud;
     }
 

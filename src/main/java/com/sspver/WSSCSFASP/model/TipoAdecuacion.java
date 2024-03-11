@@ -34,7 +34,7 @@ public class TipoAdecuacion implements Serializable {
     @Column(name = "nombre_adecuacion")
     private String nombreAdecuacion;
     @OneToMany(mappedBy = "fkTipoAdecuacion")
-    private Collection<MontosAdecuaciones> montosAdecuacionesCollection;
+    private Collection<MontoAdecuacion> montosAdecuacionesCollection;
 
     public TipoAdecuacion() {
     }
@@ -59,11 +59,11 @@ public class TipoAdecuacion implements Serializable {
         this.nombreAdecuacion = nombreAdecuacion;
     }
 
-    public Collection<MontosAdecuaciones> getMontosAdecuacionesCollection() {
+    public Collection<MontoAdecuacion> getMontosAdecuacionesCollection() {
         return montosAdecuacionesCollection;
     }
 
-    public void setMontosAdecuacionesCollection(Collection<MontosAdecuaciones> montosAdecuacionesCollection) {
+    public void setMontosAdecuacionesCollection(Collection<MontoAdecuacion> montosAdecuacionesCollection) {
         this.montosAdecuacionesCollection = montosAdecuacionesCollection;
     }
 

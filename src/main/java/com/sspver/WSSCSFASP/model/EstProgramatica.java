@@ -37,10 +37,10 @@ public class EstProgramatica implements Serializable {
     @Column(name = "fecha")
     private Short fecha;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "fkEstructura")
-    private Collection<DetallesEstructuras> detallesEstructurasCollection;
+    private Collection<DetalleEstructura> detallesEstructurasCollection;
     @JoinColumn(name = "fk_entidad", referencedColumnName = "entidad_id")
     @ManyToOne
-    private Entidades fkEntidad;
+    private Entidad fkEntidad;
 
     public EstProgramatica() {
     }
@@ -65,19 +65,19 @@ public class EstProgramatica implements Serializable {
         this.fecha = fecha;
     }
 
-    public Collection<DetallesEstructuras> getDetallesEstructurasCollection() {
+    public Collection<DetalleEstructura> getDetallesEstructurasCollection() {
         return detallesEstructurasCollection;
     }
 
-    public void setDetallesEstructurasCollection(Collection<DetallesEstructuras> detallesEstructurasCollection) {
+    public void setDetallesEstructurasCollection(Collection<DetalleEstructura> detallesEstructurasCollection) {
         this.detallesEstructurasCollection = detallesEstructurasCollection;
     }
 
-    public Entidades getFkEntidad() {
+    public Entidad getFkEntidad() {
         return fkEntidad;
     }
 
-    public void setFkEntidad(Entidades fkEntidad) {
+    public void setFkEntidad(Entidad fkEntidad) {
         this.fkEntidad = fkEntidad;
     }
 

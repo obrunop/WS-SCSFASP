@@ -36,7 +36,7 @@ public class TipoPresupuesto implements Serializable {
     @Column(name = "nombre_tipo")
     private String nombreTipo;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "fkTipo")
-    private Collection<Presupuestos> presupuestosCollection;
+    private Collection<Presupuesto> presupuestosCollection;
 
     public TipoPresupuesto() {
     }
@@ -66,11 +66,11 @@ public class TipoPresupuesto implements Serializable {
         this.nombreTipo = nombreTipo;
     }
 
-    public Collection<Presupuestos> getPresupuestosCollection() {
+    public Collection<Presupuesto> getPresupuestosCollection() {
         return presupuestosCollection;
     }
 
-    public void setPresupuestosCollection(Collection<Presupuestos> presupuestosCollection) {
+    public void setPresupuestosCollection(Collection<Presupuesto> presupuestosCollection) {
         this.presupuestosCollection = presupuestosCollection;
     }
 

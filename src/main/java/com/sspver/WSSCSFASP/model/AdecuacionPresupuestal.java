@@ -49,7 +49,7 @@ public class AdecuacionPresupuestal implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaAplicacion;
     @OneToMany(mappedBy = "fkAdecuacionPresupuestal")
-    private Collection<MontosAdecuaciones> montosAdecuacionesCollection;
+    private Collection<MontoAdecuacion> montosAdecuacionesCollection;
 
     public AdecuacionPresupuestal() {
     }
@@ -103,11 +103,11 @@ public class AdecuacionPresupuestal implements Serializable {
         this.fechaAplicacion = fechaAplicacion;
     }
 
-    public Collection<MontosAdecuaciones> getMontosAdecuacionesCollection() {
+    public Collection<MontoAdecuacion> getMontosAdecuacionesCollection() {
         return montosAdecuacionesCollection;
     }
 
-    public void setMontosAdecuacionesCollection(Collection<MontosAdecuaciones> montosAdecuacionesCollection) {
+    public void setMontosAdecuacionesCollection(Collection<MontoAdecuacion> montosAdecuacionesCollection) {
         this.montosAdecuacionesCollection = montosAdecuacionesCollection;
     }
 
